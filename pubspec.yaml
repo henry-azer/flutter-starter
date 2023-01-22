@@ -22,6 +22,9 @@ dependencies:
   http: ^0.13.4
   internet_connection_checker: ^0.0.1+4
   shared_preferences: ^2.0.15
+  loading_animation_widget: ^1.2.0+3
+  im_animations: ^0.1.2
+  flutter_snake_navigationbar: ^0.6.1
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -35,7 +38,7 @@ flutter:
   assets:
     - lang/ar.json
     - lang/en.json
-    - assets/images/quote.png
+    - assets/images/user.png
 
   fonts:
     - family: Tajawal

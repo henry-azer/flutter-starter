@@ -14,13 +14,11 @@ class AppLocalizations {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
 
-  static const LocalizationsDelegate<AppLocalizations> delegate =
-      AppLocalizationsDelegate();
+  static const LocalizationsDelegate<AppLocalizations> delegate = AppLocalizationsDelegate();
   late Map<String, String> _localizedStrings;
 
   Future<void> load() async {
-    String jsonString =
-        await rootBundle.loadString('lang/${locale.languageCode}.json');
+    String jsonString = await rootBundle.loadString('lang/${locale.languageCode}.json');
     Map<String, dynamic> jsonMap = json.decode(jsonString);
     _localizedStrings = jsonMap.map<String, String>((key, value) {
       return MapEntry(key, value.toString());
@@ -28,6 +26,8 @@ class AppLocalizations {
   }
 
   String? translate(String key) => _localizedStrings[key];
+
+  bool get isArLocale => locale.languageCode == 'ar';
 
   bool get isEnLocale => locale.languageCode == 'en';
 }
